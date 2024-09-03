@@ -1,7 +1,9 @@
-import grid from "./grid";
+import Grid from "./grid";
 describe("Posición", () => {
     it("deberia Devolver la Posicion", () => {
-      expect(grid(3, 3)).toEqual(3,3);
+      const grid = new Grid();
+      grid.setAtr(3,3);
+      expect(grid.getAtr()).toEqual({ x: 3, y: 3 });
     });
   });
   
