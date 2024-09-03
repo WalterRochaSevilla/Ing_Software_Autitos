@@ -14,5 +14,20 @@ describe("Posición", () => {
       autito.setAtr(0,"3N");
       expect(autito.getAtr()).toEqual( {X :0 , Y: 3 , O: "N" } );
     });
+    it("deberia Devolver la Posicion Inicial del autito", () => {  
+      const autito=new Autito();
+      autito.setAtr(0,"3N");    
+      expect(autito.girar("I")).toEqual( {O: "O" } );
+    });
+    it("deberia Devolver la Posicion Inicial del autito", () => {  
+      const autito=new Autito();
+      autito.setAtr(0,"3N");    
+      expect(autito.girar("D")).toEqual( {O: "E" } );
+    });
+    it("deberia Devolver la Posicion Inicial del autito", () => {  
+      const autito=new Autito();
+      autito.setAtr(0,"3N");    
+      expect(autito.girar("A")).toEqual( {O: "N" } );
+    });
   });
   
