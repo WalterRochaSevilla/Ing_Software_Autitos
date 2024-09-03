@@ -13,19 +13,40 @@ class Autito{
         return {X: this.x, Y: this.y, O: this.o};
     }
     girar(G) {
-        const indexActual = this.orientaciones.indexOf(this.o); // Encontrar la posición actual en el array de orientaciones
+        const indexActual = this.orientaciones.indexOf(this.o);
         let nuevoIndex;
-
-        if (G === "D") { // Si gira a la derecha
-            nuevoIndex = (indexActual + 1) % this.orientaciones.length; // Incrementa el índice
-        } else if (G === "I") { // Si gira a la izquierda
-            nuevoIndex = (indexActual - 1 + this.orientaciones.length) % this.orientaciones.length; // Decrementa el índice
+        if (G === "D") { 
+            nuevoIndex = (indexActual + 1) % this.orientaciones.length;
+        } else if (G === "I") {
+            nuevoIndex = (indexActual - 1 + this.orientaciones.length) % this.orientaciones.length;
         } else {
             nuevoIndex = indexActual
         }
-
-        this.o = this.orientaciones[nuevoIndex]; // Actualizar la orientación
+        this.o = this.orientaciones[nuevoIndex];
         return {O: this.o};
+    }
+    mover(comando_movimiento){
+        for (const letra of comando_movimiento){
+            if (letra == "D" || letra == "I"){
+                this.girar(letra);
+            }else{
+                switch(this.o){
+                    case "N":
+                        this.y= this.y + 1;
+                        break;
+                    case "S":
+                        this.y= this.y - 1;
+                        break;
+                    case "O":
+                        this.x= this.x - 1;
+                        break;
+                    case "E":
+                        this.x= this.x + 1;
+                        break;
+                }
+            }
+        }
+        return {X: this.x, Y: this.y, O: this.o};
     }
 }
 export default Autito;
