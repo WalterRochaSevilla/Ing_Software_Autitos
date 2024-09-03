@@ -1,5 +1,6 @@
 import Grid from "./grid";
 import Autito from "./autito";
+import Control from "./control";
 describe("Posición", () => {
     it("deberia Devolver la Posicion", () => {
       const grid = new Grid();
@@ -44,5 +45,10 @@ describe("Posición", () => {
       autito.setAtr(1,"4N");    
       expect(autito.mover("IAIA")).toEqual( {X :0 , Y: 3 , O: "S" } );
     });
+    it("Control", () => {  
+      const control = new Control();
+      control.setAtr("5,5/3,3E/AADAADADDA");
+      expect(control.mover()).toEqual({ X: 5, Y: 1, O: "E" });
+    });    
   });
   
