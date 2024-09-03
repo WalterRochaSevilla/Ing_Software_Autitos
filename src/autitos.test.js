@@ -1,5 +1,5 @@
 import Grid from "./grid";
-import autito from "./autito";
+import Autito from "./autito";
 describe("Posición", () => {
     it("deberia Devolver la Posicion", () => {
       const grid = new Grid();
@@ -10,7 +10,9 @@ describe("Posición", () => {
 
   describe("Autito", () => {
     it("deberia Devolver la Posicion Inicial del autito", () => {
-      expect(autito(0,3,"N")).toEqual( {X :0 , Y: 3 , O: "N" } );
+      const autito=new Autito();
+      autito.setAtr(0,"3N");
+      expect(autito.getAtr()).toEqual( {X :0 , Y: 3 , O: "N" } );
     });
   });
   
