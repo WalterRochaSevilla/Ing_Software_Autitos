@@ -1,13 +1,19 @@
-<html>
-  <body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Remoto Autito</title>
+</head>
+<body>
     <h1>Control Remoto Autito</h1>
     <form id="control-form">
-      <label for="comando">comando:</label>
-      <input type="text" id="comando" />
+      <label for="comando">Comando:</label>
+      <input type="text" id="comando" placeholder="Ej: 5,5/0,0N/IAAAAIAI" required />
       <input type="submit" value="Ejecutar" id="ejecutar-button" />
     </form>
     <div id="resultado-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
-  </body>
+</body>
 </html>

@@ -1,7 +1,3 @@
-// function grid(x,y){
-//     return x,y;
-// }
-// export default grid;
 class Grid {
     setAtr(x, y) {
         this.x = x;

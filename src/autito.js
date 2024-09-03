@@ -1,7 +1,3 @@
-// function autito(x,y,O){
-//     return {X: x, Y: y, O: O};
-// }
-// export default autito;
 class Autito{
     setAtr(x,YO){
         this.x = x;
@@ -42,7 +38,7 @@ class Autito{
                         }
                         break;
                     case "O":
-                        if (this.x >= 0){
+                        if (this.x -1 >= 0){
                             this.x= this.x - 1;
                         }
                         break;

@@ -10,7 +10,7 @@ class Control {
         const [x,yo]=posicion_autito.split(',');
         this.autito=new Autito();
         this.autito.setAtr(parseInt(x), yo);
-        this.movimientos = movimientos; // Guardar movimientos para usar en el método `mover`
+        this.movimientos = movimientos; // Guardar movimientos para usar en el método mover
     }
     
     mover() {
