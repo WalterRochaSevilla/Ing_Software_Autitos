@@ -8,7 +8,13 @@ class Grid {
         this.y = y;
     }
     getAtr() {
-        return { x: this.x, y: this.y }; // Devolver un objeto con las coordenadas
+        return { x: this.x, y: this.y }; 
+    }
+    get_x(){
+        return this.x;
+    }
+    get_y(){
+        return this.y;
     }
 }
 

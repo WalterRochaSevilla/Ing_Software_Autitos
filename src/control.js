@@ -14,7 +14,7 @@ class Control {
     }
     
     mover() {
-        const resultado = this.autito.mover(this.movimientos); // Utiliza this.movimientos
+        const resultado = this.autito.mover(this.movimientos, this.grid.get_x(), this.grid.get_y()); // Utiliza this.movimientos
         return resultado;
     }
 }

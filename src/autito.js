@@ -25,23 +25,31 @@ class Autito{
         this.o = this.orientaciones[nuevoIndex];
         return {O: this.o};
     }
-    mover(comando_movimiento){
+    mover(comando_movimiento, limitex=50000, limitey=50000){
         for (const letra of comando_movimiento){
             if (letra == "D" || letra == "I"){
                 this.girar(letra);
             }else{
                 switch(this.o){
                     case "N":
-                        this.y= this.y + 1;
+                        if(this.y +  1 <= limitey){
+                            this.y= this.y + 1;
+                        }
                         break;
                     case "S":
-                        this.y= this.y - 1;
+                        if(this.y -  1 >= 0){
+                            this.y= this.y - 1;
+                        }
                         break;
                     case "O":
-                        this.x= this.x - 1;
+                        if (this.x >= 0){
+                            this.x= this.x - 1;
+                        }
                         break;
                     case "E":
-                        this.x= this.x + 1;
+                        if(this.x +  1 <= limitex){
+                            this.x= this.x + 1;
+                        }
                         break;
                 }
             }
